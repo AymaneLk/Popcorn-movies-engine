@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* HEADER STYLE */
+
+header {
+    background-color: #121212;
+    padding: 5px 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo-container img{
+    max-width: 140px;
+    cursor: pointer;
+}
+
+header .input-container input{
+    width: 720px;
+    height: 40px;
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 7px;
+    border: .5px solid #000;
+    font-weight: 500;
+    outline: none;
+}
+
+header .input-container button {
+    background: none;
+    border: none;
+    color: #000;
+    transform: translateX(-30px);
+    cursor: pointer;
+}
+
+header .others-container {
+    display: flex;
+}
+
+header .others-container > div {
+    margin-right: 30px;
+}
+
+header .others-container > div a {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+header .others-container div:first-child {
+    border-right: 1px solid rgb(167, 159, 159);
+    padding-right: 12px;
+}
+
+header .others-container div:first-child a{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header .others-container div:nth-child(2) i {
+    padding-right: 5px;
+    font-size: .8em;
+}
+
+header .others-container div a:hover {
+    color: #dac518;
+    background-color: rgb(51, 50, 50);
+    padding: 4px;
+    border-radius: 5px;
+    transition: all .3s ease-in;
+}
+
+/* MAIN STYLE */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.movie {
+    width: 300px;
+    background-color: #dac518;
+    margin: 1rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem 1rem;
+    letter-spacing: .5px;
+}
+
+.movie span {
+    background-color: rgb(255, 242, 242);
+    border-radius: 3px;
+    font-weight: bold;
+    padding: .25rem .5rem;
+}
+
+.movie-info span.green {
+    color: green;
+}
+
+.movie-info span.orange {
+    color: rgb(185, 132, 33);
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    background-color: #dac518;
+    padding: 2rem;
+    max-height: 100%;
+    overflow: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: all .3s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(0%);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1620px) {
+    header .others-container > div a {
+        font-size: .8em;
+    }
+    header .input-container input{
+        width: 420px;
+    }
+} 
+
+@media screen and (max-width: 1328px){
+    header .input-container input{
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    header .others-container{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px){
+    header .logo-container {
+        display: none;
+    }
+
+    header .input-container i {
+        display: none;
+    }
+
+    header .input-container input{
+        width: auto;
+    }
+}
